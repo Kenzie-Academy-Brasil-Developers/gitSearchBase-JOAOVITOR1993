@@ -1,7 +1,14 @@
+ /* @import url('https://fonts.googleapis.com/css2? family= Inter:wght@100;200;400;500;600;700;800 & display=swap');  */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+}
+
+html{
+  font-family: 'Inter', sans-serif;
 }
 
 :root{
@@ -14,4 +21,28 @@
     --color-grey-6:  #A6A8A9;
     --color-grey-7:  #FFFFFF;
     --color-alert:   #C22554;
+
+    --radius-default: 0.25rem;
+    --radius-2: 0.5rem;
+
+    --title-1: 2rem;
+    --title-2: 1.5rem;
+    --title-3: 1.25rem;
+    --title-4: 1rem;
+    --title-5: 0.87rem;
+
+    --text-1:  1.125rem;
+    --text-2:  1rem;
+    --text-3:  0.875rem;
 }
+
+.container {
+  max-width: 49rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+

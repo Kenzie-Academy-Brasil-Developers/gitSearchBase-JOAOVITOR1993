@@ -1,1 +1,123 @@
-/* Desenvolva sua estilização aqui...*/
+main{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.usuariosEncontrados{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    background-color: var(--color-brand-1);
+    
+}
+
+.pesquisarUsuários{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    background-color: var(--color-grey-2);
+    
+}
+
+.caixaEncontrados{
+    width: 55%;
+}
+
+.caixaEncontrados h1{
+    color: var(--color-grey-7);
+    font-size: var(--title-1);
+    margin-bottom: 2.31rem;
+}
+
+.caixaEncontrados > p{
+    color: var(--color-grey-7);
+    font-size: var(--title-3);
+    margin-bottom: 3.43rem;
+}
+
+.divUsuarios{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.18rem;
+}
+
+.divUsuarios p{
+    color: var(--color-grey-7);
+    font-size: var(--title-4);
+}
+
+.divUsuarios ul{
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+}
+
+.divUsuarios ul li{
+    cursor: pointer;
+    position: relative;
+}
+
+.divUsuarios ul li img{
+    width: 2.75rem; 
+    height: 2.75rem;  
+}
+
+.divUsuarios ul li p{
+    display: none;
+}
+
+.divUsuarios ul li:hover > p{
+    color: var(--color-grey-1);
+    padding: 0.25rem 0.5rem;
+    background-color: var(--color-grey-7);
+    border-radius: var(--radius-default);
+    font-size: 0.75rem;
+    font-weight: 500;
+    width: 8rem;
+    text-align: center;
+    position: absolute;
+    top: 2.5rem;
+    left: -2.5rem;
+    z-index: 1;
+    display:block;
+}
+
+.caixaPesquisar{
+    width: 55%;
+}
+
+.caixaPesquisar h2{
+    color: var(--color-grey-7);
+    font-size: var(--title-3);
+    margin-bottom: 2.81rem;
+}
+
+.caixaPesquisar form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixaPesquisar form label{
+    color: var(--color-grey-7);
+    font-size: var(--title-5); 
+    margin-bottom: 0.75rem;
+}
+
+.caixaPesquisar form input{
+    border-radius: var(--radius-default);
+    margin-bottom: 1.25rem;
+    height: 2.37rem;
+    background-color: var(--color-grey-2);
+    border: solid 1px var(--color-grey-6);
+    padding: 1rem;
+    color: var(--color-grey-7);
+}
+
+.caixaPesquisar form input::placeholder{
+    font-size: var(--title-5);
+}
+

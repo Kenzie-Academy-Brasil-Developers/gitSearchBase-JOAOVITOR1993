@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/globalStyles.css" />
+    <link rel="stylesheet" href="/pages/home/index.css" />
+    <link rel="stylesheet" href="/styles/buttons.css" />
+    <title>Git Search</title>
+  </head>
+  <body>
+    <main>
+      <section class="usuariosEncontrados">
+        <div class="caixaEncontrados container">
+          <h1>Git Search</h1>
+          <p>Encontre e se conecte com profissionais de forma rápida e fácil </p>
+          <div class="divUsuarios">
+            <p>Encontrados Recentemente:</p>
+            <ul>
+              <li>
+                <img src="./src/img/Ellipse 2.png" alt="">
+                <p>Acessar este perfil</p>
+              </li>
+              <li>
+                <img src="./src/img/Ellipse 2.png" alt="">
+                <p>Acessar este perfil</p>
+              </li>
+              <li>
+                <img src="./src/img/Ellipse 2.png" alt="">
+                <p>Acessar este perfil</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="pesquisarUsuários">
+        <div class="caixaPesquisar container">
+          <h2>Procurar por um usuário</h2>
+          <form>
+            <label for="">Usuário github</label>
+            <input class="inputUsuario"type="text" placeholder="Digite um usuário do github aqui..." required="true">
+            <button id="botaoUsuario"class="botaoPadrao3 salmao" type="submit">Ver perfil do github</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/pages/home/index.js"></script>
+  </body>
+</html>
