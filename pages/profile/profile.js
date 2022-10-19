@@ -1,41 +1,41 @@
-const url = "https://api.github.com/users"
-const headers = {"Content-Type": "application/json"}
-
-
-async function requisicaoUsuario(nomeUsuario){
-    const usuario = await fetch(`${url}/${nomeUsuario}`,{
-        method:"GET",
-        headers: headers
-    })
-    .then(resp => resp.json())
-    .then(resp => {
-        return resp
-    })
-    .catch(err=> console.log(err))
-
-    renderizarUsuario(usuario)
+function buscarUsuarioObj(){
+    return JSON.parse(localStorage.getItem("@usuario:Obj")) || []
 }
 
-
-
-//"JOAOVITOR1993"
+function buscarRepositoriosObj(){
+    return JSON.parse(localStorage.getItem("@repositorios:Obj")) || []
+}
 
 function renderizarUsuario(data){
     const img = document.querySelector(".imgPerfil")
     const h1 = document.querySelector(".nome")
     const p = document.querySelector(".bio")
+    const botaoTrocar = document.querySelector(".botaoTrocarUsuario")
+    const botaoEmail = document.querySelector(".botaoEmail")
+    const aEmail = document.querySelector(".aEmail")
 
     img.src = data.avatar_url
     h1.innerText = data.name
-    p.innerText = data.bio
+    p.innerText = data.bio 
+    botaoTrocar.addEventListener("click", ()=>{
+        window.location.assign("../../index.html")
+    })
+    botaoEmail.addEventListener("click", ()=>{
+        aEmail.href = `mailto:${data.email}`
+    })
+    aEmail.target = "_blank"
 
 }
+renderizarUsuario(buscarUsuarioObj())
 
-
-
-const ul = document.querySelector(".repositorios")
-// const li = criarCardsRepo()
-// ul.append(li)
+function renderizarCardsRepo(data){
+    const ul = document.querySelector(".repositorios")
+    data.forEach(repositorio =>{
+        const li = criarCardsRepo(repositorio)
+        ul.append(li)
+    })
+}
+renderizarCardsRepo(buscarRepositoriosObj())
 
 function criarCardsRepo(objeto){
     const li = document.createElement("li")
@@ -68,4 +68,3 @@ function criarCardsRepo(objeto){
 }
 
 
-export default requisicaoUsuario

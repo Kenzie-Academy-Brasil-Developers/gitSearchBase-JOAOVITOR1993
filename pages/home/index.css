@@ -62,7 +62,8 @@ main{
 
 .divUsuarios ul li img{
     width: 2.75rem; 
-    height: 2.75rem;  
+    height: 2.75rem; 
+    border-radius: 50%; 
 }
 
 .divUsuarios ul li p{
@@ -107,17 +108,64 @@ main{
     margin-bottom: 0.75rem;
 }
 
-.caixaPesquisar form input{
+.caixaLimiteDiv{
+    position: relative;
+    
+}
+
+.bordaPadrao{
     border-radius: var(--radius-default);
     margin-bottom: 1.25rem;
     height: 2.37rem;
     background-color: var(--color-grey-2);
-    border: solid 1px var(--color-grey-6);
     padding: 1rem;
     color: var(--color-grey-7);
+    border: solid 1px var(--color-grey-7);
+}
+
+.bordaPadrao:focus{
+    outline: solid 1px var(--color-grey-7);
+}
+
+.bordaAlerta{
+    border-radius: var(--radius-default);
+    margin-bottom: 1.25rem;
+    height: 2.37rem;
+    background-color: var(--color-grey-2);
+    padding: 1rem;
+    color: var(--color-grey-7);
+    border:  solid 1px var(--color-alert);
+}
+
+.bordaAlerta:focus{
+    outline: solid 1px var(--color-alert);
 }
 
 .caixaPesquisar form input::placeholder{
     font-size: var(--title-5);
 }
 
+
+.usuarioNaoEncontrado{
+    color: var(--color-alert);
+    margin-bottom: 1.25rem;
+    display: none;
+}
+
+.displayBlock{
+    display: block;
+}
+
+.carregar{
+    animation: simboloSpinner 1s infinite linear;
+}
+
+@keyframes simboloSpinner{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}

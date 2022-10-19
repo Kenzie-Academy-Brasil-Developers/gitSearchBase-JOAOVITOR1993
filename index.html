@@ -17,20 +17,7 @@
           <p>Encontre e se conecte com profissionais de forma rápida e fácil </p>
           <div class="divUsuarios">
             <p>Encontrados Recentemente:</p>
-            <ul>
-              <li>
-                <img src="./src/img/Ellipse 2.png" alt="">
-                <p>Acessar este perfil</p>
-              </li>
-              <li>
-                <img src="./src/img/Ellipse 2.png" alt="">
-                <p>Acessar este perfil</p>
-              </li>
-              <li>
-                <img src="./src/img/Ellipse 2.png" alt="">
-                <p>Acessar este perfil</p>
-              </li>
-            </ul>
+            <ul class="ulPesquisados"></ul>
           </div>
         </div>
       </section>
@@ -39,8 +26,9 @@
           <h2>Procurar por um usuário</h2>
           <form>
             <label for="">Usuário github</label>
-            <input class="inputUsuario"type="text" placeholder="Digite um usuário do github aqui..." required="true">
-            <button id="botaoUsuario"class="botaoPadrao3 salmao" type="submit">Ver perfil do github</button>
+            <input class="inputUsuario bordaPadrao"type="text" placeholder="Digite um usuário do github aqui..." required="true">
+            <p class="usuarioNaoEncontrado">Usuário não encontrado</p>
+              <button id="botaoUsuario"class="botaoPadrao3 salmao" type="submit">Ver perfil do github</button>
           </form>
         </div>
       </section>
